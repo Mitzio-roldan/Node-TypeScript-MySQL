@@ -24,8 +24,8 @@ class Server {
         this.app = (0, express_1.default)();
         this.port = process.env.PORT || '8080';
         this.dbConnection();
-        this.routes();
         this.middlewares();
+        this.routes();
     }
     dbConnection() {
         return __awaiter(this, void 0, void 0, function* () {

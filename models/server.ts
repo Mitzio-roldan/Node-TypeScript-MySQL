@@ -18,8 +18,8 @@ class Server {
         this.app = express();
         this.port = process.env.PORT || '8080'
         this.dbConnection()
-        this.routes()
         this.middlewares()
+        this.routes()
     }
 
 
@@ -28,7 +28,7 @@ class Server {
             await db.authenticate()
             console.log('base ok');
             
-        } catch (error) {
+        } catch (error: Error) {
             throw new Error(error);
             
         }
